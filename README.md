@@ -4,7 +4,7 @@
 ## Init
 inside api path:
 
-`docker-compose up `
+`docker-compose build && docker-compose up `
 
 In your browse:
 
