@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2019  Luciano Veras
+#
+# Teste prático para a vaga de Desenvolvedor Python
+# Empresa: 3con
+
 from flask import Flask, render_template
 from teste_pratico import TestePratico
 import matplotlib.pyplot as plt
