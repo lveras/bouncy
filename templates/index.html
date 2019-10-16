@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(function() {
+            $('#btn_loading').hide();
+
+            $('#start').click(function () {
+                $('#start').hide();
+                $('#btn_loading').show();
+            });
+        });
+
+    </script>
+</head>
+<body>
+<center>
+    <h1>Teste Prático</h1>
+
+    <div class="col-sm-10 form-group-lg">
+        <form action="chart" class="form-group">
+            <div class="btn-group" data-toggle="buttons">
+                <p style="text-align: left; margin: 20px;">
+                Dear applicant,<br /><br />
+                This technical test is for the full time position as Python/Django backend developer in ZINA Development
+                team, please read it carefully and follow all the instructions in order to apply to this job position:
+                To pass this test you must write a Python script to solve the next mathematical problem,
+                You can use any library you need to acomplish this task. Please try to solve the test. Do not copy the
+                solution from INTERNET, this may lead you to be disqualified.<br /><br /><br />
+                Problem:<br />
+                Working from left-to-right if no digit is exceeded by the digit to its left it is called an increasing number;
+                for example, 134468. Similarly if no digit is exceeded by the digit to its right it is called a decreasing number;
+                for example, 66420.<br />
+                We shall call a positive integer that is neither increasing nor decreasing a "bouncy" number;
+                for example, 155349. Clearly there cannot be any bouncy numbers below one-hundred, but just
+                over half of the numbers below one-thousand (525) are bouncy. In fact, the least number for which the
+                proportion of bouncy numbers first reaches 50% is 538.<br /><br />
+                Surprisingly, bouncy numbers become more and more common and by the time we reach 21780 the
+                proportion of bouncy numbers is equal to 90%.<br /><br />
+                Find the least number for which the proportion of bouncy numbers is exactly 99%.<br /><br />
+                Please host the solution in a git cloud based repository like Github/Gitlab/Bitbucket as a public repository
+                and send us the URL so we can analyse your code. Add a requirements.txt file if you are using any
+                third party library and add a Readme.md explaining how to run your solution.<br /><br />
+                Best regards,<br /><br />
+                ZINA Team Development
+                </p>
+
+                <button id="btn_loading" name="btn_loading" class="btn btn-primary" type="button" disabled>
+                  <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                  Calculating<br />bouncy<br />percentage...
+                </button>
+                <button type="submit" class="btn btn-primary btn-lg" id="start">Start</button>
+            </div>
+    </form>
+    </div>
+</center>
+</body>
+</html>
