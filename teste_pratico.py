@@ -36,7 +36,6 @@ class TestePratico(object):
         return True
 
     def inc_range(self, point, new_point):
-        
         res = [{'num': i, 'bouncy': self.filter_bouncy(i)}
                 for i in range(int(point), int(new_point)+1)]
         
@@ -50,6 +49,7 @@ class TestePratico(object):
     def bouncy(self):
         df_res = pd.DataFrame(columns=['Number', 'Bouncy Percent'])
         while True:
+            self.df.drop_duplicates(subset='num', inplace=True)
             point = self.df['num'].max()
             percent = self.check_percent()
             df_res = df_res.append({'Number': point, 'Bouncy Percent': percent},
